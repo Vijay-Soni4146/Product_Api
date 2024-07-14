@@ -11,12 +11,14 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const productsRoutes = require('./routes/products')
+const usersRoutes = require('./routes/users')
 
-app.get("/",(req,res)=>{
+app.get("/",(res)=>{
     res.send('Hi I am live')
 })
 
 app.use('/api/products',productsRoutes)
+app.use("/api/users", usersRoutes);
 
 const start = async()=>{
     try{
