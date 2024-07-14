@@ -13,8 +13,8 @@ app.use(bodyParser.json());
 const productsRoutes = require('./routes/products')
 const usersRoutes = require('./routes/users')
 
-app.get("/",(res)=>{
-    res.send('Hi I am live')
+app.get("/",(req,res)=>{
+    res.send('Hi I am live');
 })
 
 app.use('/api/products',productsRoutes)
